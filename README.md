@@ -2,9 +2,9 @@
 
 A nim library providing comprehensions: 
 
-* set comprehension `comp{for k, v in comp(a): (if k == v: k)}`
-* table comprehensions `comp{for k, v in comp(a): (if k == v: {k: v})}`
-* seq comprehensions `comp[for k, v in comp(a): k + v]`
+* set comprehension `comp{for k, v in a: (if k == v: k)}`
+* table comprehensions `comp{for k, v in a: (if k == v: {k: v})}`
+* seq comprehensions `comp[for k, v in a: k + v]`
 
 # Implementation
 
