@@ -7,7 +7,7 @@ let a = {0: 0, 3: 0}.toTable()
 suite "comprehension":
   test "set from table":
     let e = comp{for k, v in a: (if k == v: k)}
-    check(e == @[0].toSet())
+    check(e == @[0].toHashSet())
 
   test "table from table":
     let f = comp{for k, v in a: (if k == v: {k: v})}

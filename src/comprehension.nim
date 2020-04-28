@@ -49,7 +49,7 @@ proc compImpl(f: NimNode, isSet: static[bool]): NimNode =
       a[^1] = child
       let childType = newCall(bindSym"type", a)
       pre = quote:
-        var `compResult` = initSet[`childType`]()
+        var `compResult` = initHashSet[`childType`]()
       newCode = quote:
         `compResult`.incl(`child`)
     else:
