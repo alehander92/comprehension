@@ -1,4 +1,4 @@
-import unittest, comprehension, tables, sets, sequtils
+import unittest, comprehension, tables, sets
 
 {.experimental: "forLoopMacros".}
 
@@ -15,5 +15,5 @@ suite "comprehension":
 
   test "seq from table":
     let g = comp[for k, v in a: k + v]
-    check(g == @[0, 3])
+    check(g in @[@[0, 3], @[3, 0]])
 

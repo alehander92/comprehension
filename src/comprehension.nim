@@ -1,4 +1,4 @@
-import macros, tables, sets, typetraits, sequtils
+import macros, tables, sets, typetraits
 
 
 proc compImpl(f: NimNode, isSet: static[bool]): NimNode =
