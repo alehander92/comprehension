@@ -14,7 +14,7 @@ proc compImpl(f: NimNode, isSet: static[bool]): NimNode =
 
   var z = code
   var isTest = false
-  echo code.lisprepr
+  # echo code.lisprepr
   case code.kind:
   of nnkIfStmt:
     z = code[0][1]
@@ -72,7 +72,7 @@ proc compImpl(f: NimNode, isSet: static[bool]): NimNode =
       `result`
       `compResult`
 
-  echo result.repr
+  # echo result.repr
 
 # Faith
 macro comp*(f: untyped): untyped =
